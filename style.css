@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #f4f7f9;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --reschedule-color: #E27B4A;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.dashboard-container {
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.content-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.total-users-card {
+    text-align: center;
+}
+
+.data-value {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.graph-card {
+    height: 300px;
+}
+
+#user-contact-list,
+#meetings-list {
+    list-style: none;
+    padding: 0;
+}
+
+#user-contact-list li,
+#meetings-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.info-button:hover {
+    background-color: #3873B6;
+}
+
+.reschedule-button {
+    background-color: var(--reschedule-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease-in-out;
+    margin-left: 10px;
+}
+
+.reschedule-button:hover {
+    background-color: #C76B40;
+}
+
+/* Media Query for Tablets and Desktops */
+@media (min-width: 768px) {
+    .dashboard-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0;
+    }
+    .content-stack {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card {
+        flex-basis: calc(50% - 10px);
+    }
+    .total-users-card,
+    .graph-card {
+        flex-basis: 100%;
+    }
+    .graph-card {
+        height: 400px;
+    }
+}
