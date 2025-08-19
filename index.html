@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header>
+            <h1>Dashboard Overview</h1>
+        </header>
+
+        <div class="content-stack">
+            <div class="card total-users-card">
+                <h3>Total Users</h3>
+                <p class="data-value" id="total-users-value">0</p>
+            </div>
+            
+            <div class="card graph-card">
+                <h3>Conversations Over Time</h3>
+                <canvas id="conversation-chart"></canvas>
+            </div>
+
+            <div class="card contact-info-card">
+                <h3>Recent User Contact Info</h3>
+                <ul id="user-contact-list">
+                    </ul>
+            </div>
+
+            <div class="card meetings-card">
+                <h3>Meetings Scheduled</h3>
+                <ul id="meetings-list">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
